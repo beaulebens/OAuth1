@@ -587,6 +587,7 @@ class WP_REST_OAuth1 {
 		$data = array(
 			'oauth_token' => self::urlencode_rfc3986( $key ),
 			'oauth_token_secret' => self::urlencode_rfc3986( $data['secret'] ),
+			'user_id' => $token['user']
 		);
 		return $data;
 	}
